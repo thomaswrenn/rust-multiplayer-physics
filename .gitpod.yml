@@ -7,6 +7,8 @@ workspaceLocation: "./rust-multiplayer-physics"
 tasks:
   - name: Server
     init: |
+      echo 'Building Server'
+      cd ./server
       cargo run --release
     command: |
       echo 'Starting Server'
