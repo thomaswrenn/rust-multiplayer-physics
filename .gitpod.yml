@@ -7,7 +7,7 @@ workspaceLocation: "./rust-multiplayer-physics"
 tasks:
   - name: Server
     env:
-      WS_PORT: 6464
+      WS_PORT: 8000
     init: |
       echo 'Building Server'
       cd ./server
@@ -19,7 +19,7 @@ tasks:
 
   - name: Static Server
     command: |
-      gp ports await 6464
+      # gp ports await 6464
       echo 'Starting Static Server'
       cd ./client
       python -m http.server 8000
