@@ -25,6 +25,11 @@ tasks:
       python -m http.server 8000
     openMode: split-right
 
+  - name: Nginx
+    command: >
+      nginx &&
+      multitail /var/log/nginx/access.log -I /var/log/nginx/error.log
+
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - name: Server
