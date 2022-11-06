@@ -8,6 +8,7 @@ tasks:
   - name: Test
     command: pwd
   - name: Server
+    init: cargo run --release
     command: sh ./setup_scripts/start_server.sh
   - name: Static Server
     command: |
