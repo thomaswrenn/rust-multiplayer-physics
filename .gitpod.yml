@@ -5,24 +5,25 @@ workspaceLocation: "./rust-multiplayer-physics"
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Test
-    command: pwd
   - name: Server
-    init: cargo run --release
-    command: sh ./setup_scripts/start_server.sh
+    init: |
+      cargo run --release
+    command: |
+      echo 'Starting Server'
+      cd ./server
+      cargo watch -x 'run --release'
+
   - name: Static Server
     command: |
       gp ports await 6464
-      sh ./setup_scripts/start_static_frontend.sh
+      echo 'Starting Static Server'
+      cd ./client
+      python -m http.server 6465
     openMode: split-right
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - name: Server
-    port: 6464
-    onOpen: ignore
-    visibility: public
-  - name: Static Site
-    port: 8000
+    port: 6464-6465
     onOpen: open-preview
     visibility: public
