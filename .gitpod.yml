@@ -7,17 +7,19 @@ workspaceLocation: "./rust-multiplayer-physics"
 tasks:
   - name: Test
     command: pwd
-  - name: Static Server
-    command: sh ./setup_scripts/start_static_frontend.sh
-  - name: DB Server
+  - name: Server
     command: sh ./setup_scripts/start_server.sh
+  - name: Static Server
+    command: |
+      gp ports await 6464
+      sh ./setup_scripts/start_static_frontend.sh
     openMode: split-right
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - name: Static Site
-    port: 8000
-    onOpen: open-preview
   - name: Server
     port: 6464
     onOpen: ignore
+  - name: Static Site
+    port: 8000
+    onOpen: open-preview
