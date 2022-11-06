@@ -12,7 +12,8 @@ tasks:
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
-  - port: 80
+  - name: Static Site
+    port: 80
     onOpen: open-preview
   - name: Server
     port: 6464
