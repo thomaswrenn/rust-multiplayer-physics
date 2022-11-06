@@ -7,7 +7,7 @@ workspaceLocation: "./rust-multiplayer-physics"
 tasks:
   - name: Server
     env:
-      WS_PORT: 8000
+      WS_PORT: 6464
     init: |
       echo 'Building Server'
       cd ./server
