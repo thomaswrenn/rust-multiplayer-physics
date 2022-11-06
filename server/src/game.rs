@@ -80,15 +80,15 @@ impl Game {
             self.add_cuboid(50.0 + 100.0 * i, 100.0, 70.0, 70.0, angle + 0.3 * i, false);
         }
 
-        for i in 0..11 {
-            let i = i as f32;
-            self.add_cuboid(50.0 + 80.0 * i, 290.0, 50.0, 50.0, angle + 0.3 * i, false);
-        }
+        // for i in 0..11 {
+        //     let i = i as f32;
+        //     self.add_cuboid(50.0 + 80.0 * i, 290.0, 50.0, 50.0, angle + 0.3 * i, false);
+        // }
 
-        for i in 0..10 {
-            let i = i as f32;
-            self.add_cuboid(50.0 + 80.0 * i, 480.0, 30.0, 30.0, angle + 0.3 * i, false);
-        }
+        // for i in 0..10 {
+        //     let i = i as f32;
+        //     self.add_cuboid(50.0 + 80.0 * i, 480.0, 30.0, 30.0, angle + 0.3 * i, false);
+        // }
     }
 
     fn add_cuboid(&mut self, x: f32, y: f32, w: f32, h: f32, angle: f32, is_static: bool) {
