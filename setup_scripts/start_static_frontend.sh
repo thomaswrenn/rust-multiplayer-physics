@@ -1,3 +1,3 @@
 echo 'Starting Static Server'
 cd ./client
-python -m http.server 80
+python -m http.server 8000
