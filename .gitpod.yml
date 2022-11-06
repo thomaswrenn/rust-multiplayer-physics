@@ -10,3 +10,6 @@ tasks:
 ports:
   - port: 80
     onOpen: open-preview
+  - name: Server
+    port: 6464
+    onOpen: ignore
