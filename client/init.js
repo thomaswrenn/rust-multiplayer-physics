@@ -1,4 +1,5 @@
-const address = `ws://127.0.0.1:6464`;
+// const address = `ws://127.0.0.1:6464`;
+const address = `ws://6464-thomaswrenn-rustmultipl-cees2rwhagh.ws-us74.gitpod.io`;
 
 let canvas, scaleMultiplier, mouse, socket;
 

@@ -20,6 +20,8 @@ ports:
   - name: Server
     port: 6464
     onOpen: ignore
+    visibility: public
   - name: Static Site
     port: 8000
     onOpen: open-preview
+    visibility: public
