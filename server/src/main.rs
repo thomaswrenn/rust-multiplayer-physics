@@ -18,13 +18,14 @@ use tokio_tungstenite::tungstenite::Message;
 use tokio_tungstenite::WebSocketStream;
 
 use std::collections::HashMap;
+use std::env;
 use std::{thread, time};
 
 use crate::game::Game;
 use crate::proto::proto_all;
 use quick_protobuf::MessageRead;
 
-const PORT: &str = "6464";
+const PORT: &str = env!("WS_PORT", "Please set WS_PORT");
 const FIXED_TIMESTEP: f32 = 0.016; // 60FPS
 
 #[tokio::main]

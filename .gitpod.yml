@@ -6,6 +6,8 @@ workspaceLocation: "./rust-multiplayer-physics"
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - name: Server
+    env:
+      WS_PORT: 6464
     init: |
       echo 'Building Server'
       cd ./server
